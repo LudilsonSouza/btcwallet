@@ -7,7 +7,7 @@ const bitcoin = require('bitcoinjs-lib')
 const network = bitcoin.networks.testnet
 
 //Derivação de wallet HD
-const path = `'m/49'/1'/0'/0`
+const path = `m/49'/1'/0'/0`
 
 //Criar o mnemonic para a seed (palavras de senha)
 let mnemonic = bip39.generateMnemonic()
@@ -28,4 +28,4 @@ let btcAddress = bitcoin.payments.p2pkh({
 console.log("Carteira gerada")
 console.log("Endereço: ", btcAddress)
 console.log("Chave privada: ", node.toWIF())
-console.log("Seed", mnemonic)
+console.log("Seed: ", mnemonic)
